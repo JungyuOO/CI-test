@@ -16,7 +16,7 @@ spec:
     - name: image_url
       value: "registry.ocp.test.com:5000/demo/ci-test-app:{{ revision }}"
     - name: gitops_repo_url
-      value: "https://github.com/seejune2/gitops"
+      value: "https://github.com/JungyuOO/gitops"
   pipelineSpec:
     params:
       - name: repo_url
@@ -95,7 +95,7 @@ spec:
                 storage: 1Gi
       - name: basic-auth
         secret:
-          secretName: "{{ git_auth_secret }}"
+          secretName: "{{ cigh-webhook-secret }}"
       - name: docker-config
         secret:
           secretName: "my-registry-secret"
